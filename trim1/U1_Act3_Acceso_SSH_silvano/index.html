@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Acceso SSH</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./imagenes/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i>Administración de Sistemas Operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i>Acceso SSH</i></li>
+    <li><b>Componentes del grupo:</b> <i>Silvano Pérez Yanes</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2014/2015</i></li>
+    <li><b>Fecha de entrega:</b> <i>27 de Enero de 2014</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>Preparativos</a> | <a href='#bloque2'>Configuración SSH</a> | <a href='#bloque3'>Prompt SSH</a> | <a href='#bloque4'>Autenticación</a> | <a href='#bloque5'>SSH -X y Wine</a> | <a href='#bloque6'>Restricciones</a>
+</div>
+<h1><a id='bloque1'>Preparativos</a></h1>
+<p>En esta actividad vamos a conectarnos a los usuarios de un server desde una maquina externa, utilizando el openSSH.
+En estas se muestra la instalación del sistema operativo y el programa ha instalar; tambien configuramos el fichero etc/hosts para que el server y los clientes 
+asocien las ips con los nombre asignados en el fichero de configuración.</p>
+<img src='./imagenes/1.png'/></br></br>
+<img src='./imagenes/2.png'/></br></br>
+<img src='./imagenes/3.png'/></br></br>
+<img src='./imagenes/4.png'/></br></br>
+<img src='./imagenes/5.png'/></br></br>
+<img src='./imagenes/6.png'/></br></br>
+<img src='./imagenes/7.png'/></br></br>
+<img src='./imagenes/8.png'/></br></br>
+<img src='./imagenes/9.png'/></br></br>
+<img src='./imagenes/10.png'/></br></br>
+<h1><a id='bloque2'>Configuración SSH</a></h1>
+<p>En este apartado comprobamos los servicios del openSSH; también comprobamos la clave que tiene openSSH.</p>
+<img src='./imagenes/11.png'/></br></br>
+<img src='./imagenes/12.png'/></br></br>
+<h1><a id='bloque3'>Prompt SSH</a></h1>
+<p>A continuación, comfiguramos el fichero del prompt, en el server para que cuando nos conectemos al usuario que querramos tener configurado con el prompt, 
+podamos ver los cambios hechos en el prompt.</p>
+<img src='./imagenes/17.png'/></br></br>
+<img src='./imagenes/29.png'/></br></br>
+<h1><a id='bloque4'>Autenticación</a></h1>
+<p>En este apartado vamos ha crear un par de claves para que cuando nos intentemos loguear en el usuario que tener configurado de esta manero, podamos acceder de manera directa sin usar logins.</p>
+<img src='./imagenes/18.png'/></br></br>
+<img src='./imagenes/19.png'/></br></br>
+<img src='./imagenes/20.png'/></br></br>
+<h1><a id='bloque5'>SSH -X y Wine</a></h1>
+<p>En este apartado, el objetivo es mediante la conexión remota poder acceder a los programas instalado en el server, ya sea con el comando 
+SSH -X o con el emulador Wine.</p>
+<img src='./imagenes/21.png'/></br></br>
+<img src='./imagenes/22.png'/></br></br>
+<img src='./imagenes/23.png'/></br></br>
+<img src='./imagenes/24.png'/></br></br>
+<img src='./imagenes/25.png'/></br></br>
+
+<h1><a id='bloque6'>Restricciones</a></h1>
+<p>Por último, vamos a crear unas restricciones para que las ips no registrado en los ficheros de configuración no puedan acceder; también mediante permisos de usuarios y grupos, 
+para que los usuarios no pertenecientes los grupos no puedan acceder a los programas.</p>
+<img src='./imagenes/26.png'/></br></br>
+<img src='./imagenes/27.png'/></br></br>
+<img src='./imagenes/28.png'/></br></br>
+<img src='./imagenes/29.png'/></br></br>
+
+</body>
+</html>
