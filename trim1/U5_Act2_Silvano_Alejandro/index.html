@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Gestor de infraestructura</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.23.1" />
+</head>
+<body>
+<div style='display:table-row; padding: 10px;'>
+  <div style='float: left; width=20%; padding:10px;'>
+  <img src='./imagenes/logo.png'/>
+  </div>
+  <div style='float: left;padding:10px'>
+  <ul>
+    <li><b>M&oacute;dulo:</b> <i>Administración de sistemas operativos</i></li>
+    <li><b>T&iacute;tulo del trabajo</b> <i>Gestor de infraestructura</i></li>
+    <li><b>Componentes del grupo:</b> <i>Silvano Pérez Yanes y Alejandro García Yumar</i></li>
+    <li><b>Curso Acad&eacute;mico:</b> <i>2º ASIR</i></li>
+    <li><b>Fecha de entrega:</b> <i>3 de Febrero de 2015</i></li>
+  </ul>
+  </div>
+</div>
+<div style='float: clear;background-color: #eeeeee; border:2px solid; border-radius:10px; padding: 10px;'>
+<a href='#bloque1'>Puppet linux</a> | <a href='#bloque2'>Puppet windows</a> | <a href='#bloque3'>Conclusión</a>
+</div>
+<h1><a id='bloque1'>Puppet linux</a></h1>
+<p>Para esta actividad vamos a utilizar la herramienta puppet, tanto en debian(linux), como en windows, utilizando como servidor puppet una máquina debian.
+Para empezar vamos a realizar dicha actividad con dos máquinas debian, configuradas correctamentes y con un nombre 
+de grupo en común para nuestras máquinas, en nuestro caso será "yumar".</p>
+<img src='./imagenes/host master.png'/></br></br>
+<img src='./imagenes/2.png'/></br></br>
+<p>Una vez hecho, vamos a configurar el servidor puppet para el corercto funcionamiento de la otra máquina debian 
+que se conectará via certificado de puppet.</p>
+<img src='./imagenes/hostlinux1.png'/></br></br>
+<p>Ahora, vamos a configurar el fichero de configuración de puppet para el cliente que se va ha conectar. 
+Una vez terminado dichas configuraciones, realizamos un reinicio del puppet del servidor.</p>
+<img src='./imagenes/sitte1.png'/></br></br>
+<img src='./imagenes/hostclient1.png'/></br></br>
+<p>En el cliente debian también tiene que tener instalado el puppet, y nada más, aparte de las configuraciones 
+básicas.</p>
+<img src='./imagenes/3.png'/></br></br>
+
+<img src='./imagenes/1.png'/></br></br>
+<p>Una vez terminado dichas configuraciones, empezamos crear los cretificados para el cliente linux</p>
+<img src='./imagenes/certificado.png'/></br></br>
+<img src='./imagenes/registrarcliente.png'/></br></br>
+<p>Una vez registrado el cliente linux en el servidor de puppet, comprobamos si se a aplicado la configuración 
+de hostlinux1 en el cliente.</p>
+<img src='./imagenes/comprobarerrores.png'/></br></br>
+<img src='./imagenes/4.png'/></br></br>
+<img src='./imagenes/modifcar site.png'/></br></br>
+<p>Y otra vez registramos al cliente linux al servidor de puppet pero esta vez con 
+con el fichero hostlinux2, para que nos aplique la configuración de dicho archivo</p>
+<img src='./imagenes/hostlinux2.png'/></br></br>
+<img src='./imagenes/5.png'/></br></br>
+<img src='./imagenes/usuarios hostlinux2.png'/></br></br>
+<h1><a id='bloque2'>Puppet windows</a></h1>
+<p>A continuación, pasamos a windows, en el instalamos el programa puppet. Luego en el
+servidor de puppet en linux creamos el fichero hostwindows1 el cual nos crea un fichero en la riaz del 
+sistema windows</p>
+<img src='./imagenes/puppet windows.png'/></br></br>
+<img src='./imagenes/modificar site.png'/></br></br>
+<p>En windows, podemos configurar el fichero hosts para la correcta conectividad con el servidor linux, además 
+de comprobar la versión de puppet con facter.</p>
+<img src='./imagenes/hostwindows.png'/></br></br>
+<img src='./imagenes/puppet windows2.png'/></br></br>
+<img src='./imagenes/6.png'/></br></br>
+<img src='./imagenes/comprobacion puppet.png'/></br></br>
+<p>Una vez configurado tanto windows como linux para poder registrar el cliente windows en el servidor 
+puppet.</p>
+<img src='./imagenes/registroclient2.png'/></br></br>
+<p>Luego comprobamos que nos realiza las configuraciones del hostwindows, en este caso la cración de un fichero de texto.</p>
+<img src='./imagenes/puppet agent.png'/></br></br>
+<img src='./imagenes/fichero windows puppet.png'/></br></br>
+<p>Continuamos, esta vez con el registro del cliente windows, pero con el fichero hostwindows2, el cuál nos creará 
+varios usuarios en diferentes grupos.</p>
+<img src='./imagenes/puppet hostwindows.png'/></br></br>
+<img src='./imagenes/sitewindows3.png'/></br></br>
+<img src='./imagenes/puppetwindows.png'/></br></br>
+<img src='./imagenes/usuarios creados.png'/></br></br>
+<h1><a id='bloque3'>Conclusión</a></h1>
+<p>En esta actividad, principalmente los errores sufridos han sido en el cliente windows, ya 
+que en la instalación de puppet en windows no se estaba configurando el nosmbre del servidor de puppet,
+una vez arreglado, no hemos tenido más problemas.</p>
+</body>
+</html>
